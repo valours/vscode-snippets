@@ -1,0 +1,17 @@
+{
+	"(styled) import": {
+		"prefix": ["styled:import"],
+    "body": ["import styled from 'styled-components';\n"],
+    "scope": "typescriptreact"
+	},
+	"(styled) component": {
+		"prefix": ["styled:component"],
+		"body": ["const ${1:Component} = styled.${2:div}`\n\t${3}\n`\n"],
+    "scope": "typescriptreact"
+	},
+	"(styled) container": {
+		"prefix": ["styled:container"],
+		"body": ["const Container = styled.${1:div}`\n\t${2}\n`\n"],
+		"scope": "typescriptreact"
+	},
+}
