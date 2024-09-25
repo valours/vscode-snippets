@@ -1,0 +1,19 @@
+{
+  "(jest) import": {
+    "prefix": ["jest:import"],
+    "body": ["import {describe, expect, jest} from '@jest/globals';\n"],
+    "scope": "javascript,typescript"
+  },
+  "(jest) describe": {
+    "prefix": ["jest:describe"],
+    "body": [
+      "describe('${1:What do you want to describe ?}', () => {\n\t${2}\n})\n"
+    ],
+    "scope": "javascript,typescript"
+  },
+  "(jest) it": {
+    "prefix": ["jest:it"],
+    "body": ["it('${1:What do you want to test ?}', () => {\n\t${2}\n})\n"],
+    "scope": "javascript,typescript"
+  }
+}
