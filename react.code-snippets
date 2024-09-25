@@ -1,0 +1,57 @@
+{
+  "(react) import": {
+    "prefix": ["react:import"],
+    "body": ["import React from 'react';", ""],
+    "scope": "typescriptreact"
+  },
+  "(react) useState": {
+    "prefix": ["react:useState"],
+    "body": [
+      "const [${1:state}, set${2:State}] = useState(${3:initialState});",
+      ""
+    ],
+    "scope": "typescriptreact"
+  },
+  "(react) useEffect": {
+    "prefix": ["react:useEffect"],
+    "body": ["useEffect(() => {", "\t${1}", "}, [${2:dependencies}]);", ""],
+    "scope": "typescriptreact"
+  },
+  "(react) component": {
+    "prefix": ["react:component"],
+    "body": [
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = () => {",
+      "\treturn (",
+      "\t\t${2}",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};",
+      ""
+    ],
+    "scope": "typescriptreact"
+  },
+  "(react) useHook": {
+    "prefix": ["react:useHook"],
+    "body": ["const ${1} = use${2:Hook}();"],
+    "scope": "typescriptreact"
+  },
+  "(react) component with props": {
+    "prefix": ["react:component-with-props"],
+    "body": [
+      "interface Props {",
+      "\t${2}",
+      "}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}: FC<Props> = ({ ${3} }) => {",
+      "\treturn (",
+      "\t\t${4}",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};",
+      ""
+    ],
+    "scope": "typescriptreact"
+  }
+}
