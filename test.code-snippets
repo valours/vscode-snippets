@@ -1,0 +1,7 @@
+{
+	"(test) Given when then": {
+		"prefix": ["test:given-when-then"],
+    "body": ["// given\nconst ${1:defaultValue} = false\n\n// when\nconst ${4:result} = ${2}(${1})\n\n// then\nexpect(${4}).toBeTruthy()\n"],
+		"scope": "javascript,typescript"
+	},
+}
